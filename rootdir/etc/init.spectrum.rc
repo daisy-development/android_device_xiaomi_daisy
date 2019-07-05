@@ -120,3 +120,10 @@ on property:persist.spectrum.profile=3
     # I/O Scheduler
     write /sys/block/mmcblk0/queue/read_ahead_kb 2048
     write /sys/block/mmcblk0/queue/scheduler deadline
+
+#!/system/bin/sh
+
+# If there is not a persist value, we need to set one
+if [ ! -f /data/property/persist.spectrum.profile ]; then
+    setprop persist.spectrum.profile 0
+fi
