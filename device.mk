@@ -158,3 +158,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+# Spectrum
+    init.qcom.sensors.sh \
+    init.montana.rc \
+    init.spectrum.rc \
+    init.spectrum.sh
+
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc
