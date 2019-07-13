@@ -1,4 +1,4 @@
- Copyright (C) 2018 The LineageOS Project
+ Copyright (C) 2018-2019 The Superior OS Open Source Project
  
   Device configuration for Xiaomi Mi A2 Lite
  =========================================
