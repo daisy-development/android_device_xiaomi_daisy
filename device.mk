@@ -54,9 +54,13 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0 \
     android.hardware.audio@4.0 \
+    android.hardware.audio.common@2.0 \
     android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@2.0-util \
     android.hardware.audio.common@4.0-util \
+    android.hardware.audio.effect@2.0 \
     android.hardware.audio.effect@4.0 \
     libaudio-resampler \
     tinymix
@@ -78,8 +82,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.0
 
 # Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
+#PRODUCT_PACKAGES += \
+#    XiaomiDoze
 
 # FM
 PRODUCT_PACKAGES += \
@@ -87,8 +91,8 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+#PRODUCT_BOOT_JARS += \
+#    qcom.fmradio
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -116,8 +120,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    power.qcom
+#PRODUCT_PACKAGES += \
+#    power.qcom
 
 # QCOM
 PRODUCT_COPY_FILES += \
@@ -125,8 +129,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
 
 # Telephony
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+#PRODUCT_BOOT_JARS += \
+#    telephony-ext
 
 # Trust HAL
 PRODUCT_PACKAGES += \
@@ -134,7 +138,6 @@ PRODUCT_PACKAGES += \
 
 # Update engine
 PRODUCT_PACKAGES += \
-    brillo_update_payload \
     update_engine \
     update_verifier
 
@@ -153,12 +156,18 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package
 
 # WFD
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
+
+# Split selinux policy
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+
+# Support addtional P vendor interface
+PRODUCT_EXTRA_VNDK_VERSIONS := 28

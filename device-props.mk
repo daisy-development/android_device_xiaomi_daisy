@@ -1,5 +1,18 @@
+# ADB HAX
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.debuggable=1 \
+    persist.sys.usb.config=adb \
+    ro.secure=0 \
+    ro.adb.secure=0
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=28 \
+    ro.config.vc_call_vol_steps=9
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bluetooth.bluetooth_audio_hal.disabled=true \
     bluetooth.hfp.client=1
 
 # Camera
