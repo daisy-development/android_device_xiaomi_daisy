@@ -21,6 +21,9 @@ DEVICE_PATH := device/xiaomi/daisy
 
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
+BUILD_BROKEN_PHONY_TARGETS := true
+BUILD_BROKEN_DUP_RULES := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := daisy
 
@@ -47,6 +50,7 @@ TARGET_NO_BOOTLOADER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -162,7 +166,7 @@ BOARD_VNDK_RUNTIME_DISABLE := true
 BOARD_VNDK_VERSION := current
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
-PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
+#PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/daisy/BoardConfigVendor.mk
