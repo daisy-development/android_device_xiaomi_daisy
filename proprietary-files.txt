@@ -1998,6 +1998,17 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
+# Camera HIDL
+vendor/bin/hw/android.hardware.camera.provider@2.4-service
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
+
 # Camera-ois
 vendor/lib/libois_lc898122.so
 
@@ -2173,6 +2184,26 @@ vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so
 vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 etc/firmware/goodix_firmware.bin
+
+# Gatekeeper
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
+vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
+vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib/hw/android.hardware.gatekeeper@1.0-impl-qti.so
+vendor/lib/hw/gatekeeper.msm8953.so
+vendor/lib64/hw/gatekeeper.msm8953.so
+
+# Keymaster
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti
+vendor/etc/init/android.hardware.keymaster@3.0-service-qti.rc
+vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib64/libkeymasterdeviceutils.so
+vendor/lib64/libkeymasterprovision.so
+vendor/lib64/libkeymasterutils.so
+vendor/lib/hw/android.hardware.keymaster@3.0-impl-qti.so
+vendor/lib/libkeymasterdeviceutils.so
+vendor/lib/libkeymasterprovision.so
+vendor/lib/libkeymasterutils.so
 
 # QC RIL
 vendor/bin/hw/qcrild
